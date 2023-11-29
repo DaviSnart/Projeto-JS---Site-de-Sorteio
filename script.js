@@ -1,7 +1,18 @@
 function generateNumber() {
     
-    const min  = document.querySelector (".input-min").value
-    const max = document.querySelector (".input-max").value
+    const min  = Math.ceil(document.querySelector (".input-min").value)
+    const max = Math.floor(document.querySelector (".input-max").value)
 
-    console.log (min, max)
+    if (min >= max) {
+        alert("O valor mínimo tem que ser maior que o valor máximo.")
+    } else { 
+        const result = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+        alert(result)
+    }
+
+    
+
+    
+
 }
